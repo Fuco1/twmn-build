@@ -1,4 +1,4 @@
-# twmn-build
+# twmn-build [![Build Status](https://semaphoreci.com/api/v1/github-fuco1/twmn-build/branches/master/shields_badge.svg)](https://semaphoreci.com/github-fuco1/twmn-build)
 
 Build image for [twmn](https://github.com/sboli/twmn).
 
