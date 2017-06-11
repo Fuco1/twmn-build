@@ -13,8 +13,8 @@ cd twmn-build
 ./install
 ```
 
-After `./install` is run `twmnd` is readily available, it does not seem to need any extra libraries installed on the host.  For the `twmnc` binary you need to install boost's program-options library:
+After `./install` is run `twmnd` is readily available, it does not seem to need any extra libraries installed on the host.  For the `twmnc` binary you need to install boost's program-options and system libraries:
 
 ``` shell
-sudo apt-get install libboost-program-options1.58.0
+sudo apt-get install libboost-program-options1.58.0 libboost-system1.58.0
 ```
