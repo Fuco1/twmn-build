@@ -1,9 +1,8 @@
-FROM fuco1/build-base:bionic-1.0
+FROM fuco1/build-base:hirsute-1.0
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libboost-all-dev \
     libqt5x11extras5-dev \
-    qt5-default \
     qt5-qmake \
     && rm -rf /var/lib/apt/lists/*
 
