@@ -1,7 +1,3 @@
 #!/bin/bash
 
-docker build -f Dockerfile.build -t "fuco1/twmn-build:latest" .
-
-docker run --rm \
-       -v "$(pwd)/twmn":/twmn \
-       "fuco1/twmn-build:latest"
+docker buildx build --load -t fuco1/twmnd:latest .

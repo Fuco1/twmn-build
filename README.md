@@ -10,11 +10,9 @@ This project uses [build-base](https://github.com/Fuco1/build-base) structure.
 git clone --recursive https://github.com/Fuco1/twmn-build.git
 cd twmn-build
 ./build
-./install
 ```
 
-After `./install` is run `twmnd` is readily available, it does not seem to need any extra libraries installed on the host.  For the `twmnc` binary you need to install boost's program-options and system libraries:
+After the build, the `twmnd` daemon is ready to run as a docker
+container.  Use `./twmnd` to start it.
 
-``` shell
-sudo apt-get install libboost-program-options1.58.0 libboost-system1.58.0
-```
+This repo does not provide the `twmnc` client.
