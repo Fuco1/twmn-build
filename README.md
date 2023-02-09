@@ -16,3 +16,24 @@ After the build, the `twmnd` daemon is ready to run as a docker
 container.  Use `./twmnd` to start it.
 
 This repo does not provide the `twmnc` client.
+
+## As Systemd Unit
+
+A user systemd unit can be installed by placing the file
+`twmn/init/systemd/twmnd.service` to `~/.config/systemd/user`.  This
+file will run twmnd installed on the host computer.  To run the docker
+version, use the following service file.
+
+``` ini
+[Unit]
+Description=TWMN Daemon
+
+[Service]
+ExecStart=/home/matus/.local/bin/twmnd
+ExecReload=docker restart twmnd
+
+[Install]
+WantedBy=default.target
+```
+
+where `ExecStart` points to the `twmnd` shellscript which runs docker.
