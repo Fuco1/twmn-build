@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker run --rm -d --privileged \
+docker run --rm --privileged \
        --name twmnd \
        --env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" \
        --env DISPLAY="unix$DISPLAY" \
